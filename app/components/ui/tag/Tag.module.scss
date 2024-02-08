@@ -1,0 +1,51 @@
+@use "../../../assets/styles/scss/" as *;
+
+.tag {
+	display: inline-block;
+
+	margin-right: 5px;
+	padding: 5px 10px;
+
+	border-radius: 20px;
+}
+
+.small {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.medium {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.ghost {
+	border: 2px solid $gray-light;
+}
+
+.red {
+	color: $white;
+	background-color: #DE0000;
+
+	font-weight: 700;
+}
+
+.grey {
+	color: #313131;
+	background-color: #B3C0D9;
+
+	font-weight: 700;
+}
+
+.green {
+	color: $green;
+	background-color: $green-light;
+
+	font-weight: 700;
+}
+
+.primary {
+	color: $primary;
+	border: 1px solid $primary;
+	background: transparent;
+}

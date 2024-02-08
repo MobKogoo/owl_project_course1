@@ -1,0 +1,44 @@
+@use "../../../assets/styles/scss/" as *;
+
+.review {
+	display: grid;
+	grid-template-columns: [start] auto 1fr auto auto [end];
+
+	align-items: center;
+	gap: 10px;
+
+	font-size: 14px;
+	line-height: 24px;
+
+	@include tablet(640px) {
+		grid-template-columns: [start] 30px [titlestart] auto [dateend] 1fr [end];
+	}
+}
+
+.title {
+	@include tablet(640px) {
+		grid-column: titlestart / end;
+	}
+}
+
+.description {
+	grid-column: start / end;
+}
+
+.date {
+	margin-right: 10px;
+
+	@include tablet(640px) {
+		grid-column: start / dateend;
+	}
+}
+
+.rating {
+	@include tablet(640px) {
+		grid-column: start / end;
+	}
+}
+
+.name {
+	font-weight: bold;
+}

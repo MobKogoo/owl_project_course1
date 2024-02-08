@@ -1,0 +1,28 @@
+@use '../../../assets/styles/scss/' as *;
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 30px;
+	.card {
+		padding: 20px;
+		height: auto;
+		border-radius: 15px;
+	}
+	.title {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.list_item {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 5px 0;
+		a {
+			transition: $transition;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}

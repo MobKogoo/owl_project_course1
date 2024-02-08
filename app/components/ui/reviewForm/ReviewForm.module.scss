@@ -1,0 +1,99 @@
+@use '../../../assets/styles/scss/' as *;
+
+.reviewForm {
+	display: grid;
+	align-items: center;
+	margin-top: 20px;
+
+	font-size: 14px;
+	line-height: 24px;
+	grid-template-columns: [start] auto 1fr auto [end];
+	gap: 20px 30px;
+	@include tablet(1100px) {
+		grid-template-columns: [start] 1fr 1fr [end];
+	}
+	@include tablet(640px) {
+		grid-template-columns: [start] 1fr [end];
+	}
+}
+
+.description,
+.submit {
+	grid-column: start / end;
+}
+
+.title {
+	justify-self: left;
+	@include tablet(1100px) {
+		justify-self: normal;
+	}
+}
+
+.info {
+	margin-left: 15px;
+}
+
+.rating {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 20px;
+	@include tablet(1100px) {
+		grid-column: start / end;
+	}
+}
+
+.panel {
+	position: relative;
+
+	margin-top: 20px;
+	padding: 20px;
+
+	border-radius: 5px;
+}
+
+.success,
+.error {
+	padding: 20px;
+	position: relative;
+	margin-top: 15px;
+	border-radius: 10px;
+	.close {
+		position: absolute;
+		cursor: pointer;
+	
+		border: none;
+		background: none;
+	}
+}
+
+.success {
+	background-color: $green-light;
+	.close {
+		top: 20px;
+		right: 20px;
+	}
+}
+.error {
+	background-color: $red-dark;
+	.close {
+		top: 10px;
+		right: 10px;
+		line {
+			stroke: $white;
+		}
+	}
+}
+
+// .error {
+// 	background: $red-light;
+// }
+
+.successTitle {
+	font-weight: bold;
+}
+
+
+
+.error .close path {
+	stroke: $red;
+}

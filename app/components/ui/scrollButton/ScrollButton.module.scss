@@ -1,0 +1,17 @@
+@use "../../../assets/styles/scss/" as *;
+
+.scroll_wrapper {
+	position: fixed;
+	right: 30px;
+	bottom: 100px;
+
+	svg {
+		transform: rotate(90deg);
+
+		font-size: 20px;
+	}
+
+	@include tablet(850px) {
+		bottom: 150px;
+	}
+}

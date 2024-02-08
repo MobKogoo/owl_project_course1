@@ -1,0 +1,27 @@
+@use "../../../assets/styles/scss/" as *;
+
+.footer {
+	display: grid;
+
+	padding: 25px 30px;
+
+	color: $white;
+	background-color: $primary;
+
+	font-size: 16px;
+	line-height: 20px;
+	grid-template-columns: 1fr auto auto;
+	gap: 10px 40px;
+
+	a {
+		transition: $transition;
+	}
+
+	a:hover {
+		color: $gray-light;
+	}
+
+	@include tablet {
+		grid-template-columns: 1fr;
+	}
+}

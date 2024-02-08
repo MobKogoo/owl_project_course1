@@ -1,0 +1,40 @@
+@use "./scss/" as *;
+
+html,
+body {
+	font-family: $font-family;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+
+	color: $black;
+	background-color: #F5F6F8;
+
+	font-weight: 400;
+	font-style: normal;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.visuallyHidden {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	position: absolute;
+}

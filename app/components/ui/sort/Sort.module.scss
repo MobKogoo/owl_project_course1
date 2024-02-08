@@ -1,0 +1,52 @@
+@use '../../../assets/styles/scss/' as *;
+
+.sort {
+	svg {
+		display: none;
+	}
+}
+
+.active {
+	color: $primary;
+
+	font-weight: bold;
+
+	svg {
+		fill: $primary;
+
+		display: block;
+
+		margin-right: 8px;
+	}
+}
+
+.sort {
+	display: inline-block;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px;
+}
+
+.sortName {
+	display: none;
+}
+
+.sort button {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: 20px 1fr;
+
+	align-items: center;
+
+	cursor: pointer;
+
+	border: none;
+	background: transparent;
+
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.sort button:not(.active) {
+	grid-template-columns: 1fr;
+}

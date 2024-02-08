@@ -1,0 +1,49 @@
+@use "../../../assets/styles/scss/" as *;
+
+.btn {
+	display: inline-block;
+
+	padding: 10px;
+
+	cursor: pointer;
+	transition: $transition;
+
+	border: none;
+	border-radius: 5px;
+
+	font-size: 14px;
+}
+
+.primary {
+	color: $white;
+	background-color: $primary;
+
+	&:hover {
+		background-color: $primary-hover;
+	}
+}
+
+.ghost {
+	color: $black;
+	border: 1px solid $gray-light;
+	background: transparent;
+
+	&:hover {
+		color: $white;
+		background-color: $primary;
+	}
+
+	.arrow {
+		svg {
+			transition: $transition;
+		}
+
+		&_active svg {
+			transform: rotate(90deg);
+		}
+
+		@include flex(center);
+	}
+
+	@include flex(center);
+}
